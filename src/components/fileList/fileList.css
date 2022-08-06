@@ -1,0 +1,5 @@
+.file-list {
+    padding: 50px;
+    display: flex;
+    justify-content: flex-start;
+}

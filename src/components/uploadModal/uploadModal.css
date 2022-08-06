@@ -1,0 +1,82 @@
+.file-card {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #edf2f7;
+    border-radius: 4px;
+    min-width: 380px;
+    min-height: 230px;
+}
+.file-card .file-inputs {
+    position: relative;
+    margin-bottom: 1.5em;
+}
+.file-card .file-inputs input {
+    position: relative;
+    text-align: right;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+    height: 46px;
+    max-width: 200px;
+}
+.file-card .file-inputs button {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #0D6ABE;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    transition: background-color 0.4s;
+    box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.5);
+}
+.file-card .file-inputs button i {
+    width: 1.5em;
+    height: 1.5em;
+    padding: 0.4em;
+    background-color: #fff;
+    color: #065091;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.8em;
+    font-size: 0.8em;
+}
+.file-card .file-inputs:hover button {
+    background-color: #177ad1;;
+}
+.main {
+    font-weight: bold;
+    margin-bottom: 0.4em;
+}
+.info {
+    font-size: 0.8rem;
+}
+
+.file-card .upload button {
+    background-color: #0D6ABE;
+    border-radius: 4px;
+    border-width: 0;
+    color: #fff;
+    font-size: 12px;
+    font-family: 'Rubik';
+    font-weight: 500;
+    height: 35px;
+    margin: 0 0 12px 0;
+    padding: 0 25px;
+    cursor: pointer;
+    touch-action: manipulation;
+}
