@@ -1,16 +1,16 @@
-import './card.css'
-import { CloseButton } from '@chakra-ui/react'
-import { useDisclosure } from '@chakra-ui/react';
+import './card.css';
+import { CloseButton, Progress, useDisclosure } from '@chakra-ui/react';
 import MediaViewer from '../mediaViewer/mediaViewer';
 
-const FileCard = ({file, deleteFile}) => {
+const FileCard = ({ file, deleteFile }) => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	return (
 		<div className="card">
-			<CloseButton onClick={()=>deleteFile(file.publicId)}/>
+			<CloseButton onClick={() => deleteFile(file.publicId)} />
 			<div className="image-container">
 				<img src={file.imageUrl} alt="" onClick={onOpen} />
 			</div>
+			{file.isUploading && <Progress size="xs" backgroundColor="black" colorScheme="green" isIndeterminate />}
 			<div className="text-container">
 				<h4>
 					<small>{file.name}</small>

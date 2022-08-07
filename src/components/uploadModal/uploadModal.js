@@ -41,7 +41,7 @@ const UploadModal = ({files, setFiles, removeFile, isOpen, onClose}) => {
             <ModalContent>
             <div className="file-card">
                 <div className="file-inputs">
-                    <input type="file" onChange={uploadHandler}/>
+                    <input type="file" accept="image/*" onChange={uploadHandler}/>
                     <button>
                         SELECT FILE
                     </button>
