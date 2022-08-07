@@ -5,7 +5,7 @@ module.exports.listResources = async (res) => {
 		const { resources } = await cloudinary.search
         .expression('folder: media-manager/*')
         .sort_by('created_at','desc')
-        .max_results(10)
+        .max_results(100)
         .execute();
 		return resources.map((file) => [file.public_id, file.url]);
 	} catch (error) {

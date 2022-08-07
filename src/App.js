@@ -17,13 +17,15 @@ const App = () => {
     .then((res) => {
       console.log(res);
       if(res.data?.result){
+        let tempArray = [];
         res.data?.gallary?.forEach(element => {
           let file = {};
           file.name = element[1].substring(element[1].lastIndexOf("/")+1, element[1].length);
           file.imageUrl = element[1];
           file.publicId = element[0];
-          setFiles([...files, file])
+          tempArray.push(file)
         });
+        setFiles([...files, ...tempArray])
       }
     })
     .catch((err) => {
